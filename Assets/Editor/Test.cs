@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
-public class Test : MonoBehaviour
+public class Test
 {
     [MenuItem("Build/BuildApk")]
     public static void BuildApk()

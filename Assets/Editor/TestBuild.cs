@@ -5,14 +5,18 @@ using System.IO;
 using UnityEditor;
 using UnityEngine;
 
-public class TestBuild : MonoBehaviour
+public class TestBuild
 {
     
 
     public static void BuildApk()
     {
+
+        Debug.Log("============Start building apk file==============");
         var outdir = System.Environment.CurrentDirectory + "/BuildOutPutPath/Android";
         var outputPath = Path.Combine(outdir, Application.productName + ".apk");
+
+        Debug.Log("=====OutputPath: " + outputPath);
         // Folder processing
         if (!Directory.Exists(outdir)) Directory.CreateDirectory(outdir);
         if (File.Exists(outputPath)) File.Delete(outputPath);
